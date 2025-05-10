@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page - Classic T-Shirt</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header with Wishlist and Cart Icons -->
+  <header class="site-header">
+    <h1>Shopify Store</h1>
+    <div class="header-actions">
+      <button class="wishlist-toggle" title="View Wishlist">❤️ <span id="wishlistCount">0</span></button>
+      <button class="cart-toggle" title="View Cart">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Product Header -->
+    <header class="product-header">
+      <h1>Classic T-Shirt</h1>
+      <p class="price">₹2,100</p>
+    </header>
+
+    <!-- Main Product Section -->
+    <section class="product-main">
+      <!-- Product Images Gallery -->
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="assets/tshirt-blue.jpg" alt="Main Product Image" id="mainImage">
+        </div>
+        <div class="thumbnails">
+          <img src="assets/tshirt-blue.jpg" alt="Thumbnail 1" class="thumbnail active" data-src="assets/tshirt-blue.jpg">
+          <img src="assets/tshirt-red.jpg" alt="Thumbnail 2" class="thumbnail" data-src="assets/tshirt-red.jpg">
+          <img src="assets/tshirt-black.jpg" alt="Thumbnail 3" class="thumbnail" data-src="assets/tshirt-black.jpg">
+          <img src="assets/tshirt-white.jpg" alt="Thumbnail 4" class="thumbnail" data-src="assets/tshirt-white.jpg">
+          <img src="assets/tshirt-green.jpg" alt="Thumbnail 5" class="thumbnail" data-src="assets/tshirt-green.jpg">
+        </div>
+      </div>
+
+      <!-- Product Options -->
+      <div class="product-options">
+        <!-- Color Variants -->
+        <div class="color-variants">
+          <h3>Color: <span id="selectedColor">Blue</span></h3>
+          <div class="color-swatches">
+            <button class="swatch active" data-color="Blue" data-img="assets/tshirt-blue.jpg" style="background-color: #1e90ff;"></button>
+            <button class="swatch" data-color="Red" data-img="assets/tshirt-red.jpg" style="background-color: #ff0000;"></button>
+            <button class="swatch" data-color="Black" data-img="assets/tshirt-black.jpg" style="background-color: #000000;"></button>
+            <button class="swatch" data-color="White" data-img="assets/tshirt-white.jpg" style="background-color: #ffffff; border: 1px solid #ccc;"></button>
+            <button class="swatch" data-color="Green" data-img="assets/tshirt-green.jpg" style="background-color: #008000;"></button>
+          </div>
+          <button class="compare-colors">Compare Colors</button>
+        </div>
+
+        <!-- Size Variants -->
+        <div class="size-variants">
+          <h3>Size</h3>
+          <select id="sizeSelect">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">X-Large</option>
+          </select>
+          <button class="size-chart">Size Chart</button>
+        </div>
+
+        <!-- Add to Cart and Wishlist -->
+        <div class="action-buttons">
+          <button class="add-to-cart" data-name="Classic T-Shirt" data-price="2100">Add to Cart</button>
+          <button class="like-button" data-name="Classic T-Shirt" data-price="2100" title="Add to Wishlist">❤️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs for Product Info -->
+    <section class="product-tabs">
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="description">Description</button>
+        <button class="tab-button" data-tab="info">Product Information</button>
+        <button class="tab-button" data-tab="shipping">Shipping Details</button>
+      </div>
+      <div class="tab-content">
+        <div id="description" class="tab-pane active">
+          <p>Our Classic T-Shirt is made from 100% organic cotton, offering a soft and comfortable fit for everyday wear. Perfect for casual outings or layering.</p>
+        </div>
+        <div id="info" class="tab-pane">
+          <ul>
+            <li>Material: 100% Organic Cotton</li>
+            <li>Fit: Regular</li>
+            <li>Care: Machine washable</li>
+          </ul>
+        </div>
+        <div id="shipping" class="tab-pane">
+          <p>Free shipping on orders over ₹4,200. Estimated delivery within 3-5 business days.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Bundle Suggestion -->
+    <section class="product-bundle">
+      <h2>Buy These Together</h2>
+      <div class="bundle-items">
+        <div class="bundle-item">
+          <img src="assets/tshirt-blue.jpg" alt="Classic T-Shirt">
+          <p>Classic T-Shirt</p>
+          <p>₹2,100</p>
+        </div>
+        <div class="bundle-item">
+          <img src="assets/jeans.jpg" alt="Slim Fit Jeans">
+          <p>Slim Fit Jeans</p>
+          <p>₹4,200</p>
+        </div>
+      </div>
+      <p>Total: <strong>₹6,300</strong></p>
+      <button class="add-bundle">Add Bundle to Cart</button>
+    </section>
+
+    <!-- Pair Well With -->
+    <section class="pair-well-with">
+      <h2>Pair Well With</h2>
+      <div class="carousel">
+        <div class="carousel-items">
+          <div class="product-card">
+            <img src="assets/jeans.jpg" alt="Slim Fit Jeans">
+            <p>Slim Fit Jeans</p>
+            <p>₹4,200</p>
+            <button class="add-to-cart" data-name="Slim Fit Jeans" data-price="4200">Add to Cart</button>
+            <button class="like-button" data-name="Slim Fit Jeans" data-price="4200">❤️</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/sneakers.jpg" alt="White Sneakers">
+            <p>White Sneakers</p>
+            <p>₹6,720</p>
+            <button class="add-to-cart" data-name="White Sneakers" data-price="6720">Add to Cart</button>
+            <button class="like-button" data-name="White Sneakers" data-price="6720">❤️</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/jacket.jpg" alt="Denim Jacket">
+            <p>Denim Jacket</p>
+            <p>₹5,040</p>
+            <button class="add-to-cart" data-name="Denim Jacket" data-price="5040">Add to Cart</button>
+            <button class="like-button" data-name="Denim Jacket" data-price="5040">❤️</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/hat.jpg" alt="Baseball Cap">
+            <p>Baseball Cap</p>
+            <p>₹1,680</p>
+            <button class="add-to-cart" data-name="Baseball Cap" data-price="1680">Add to Cart</button>
+            <button class="like-button" data-name="Baseball Cap" data-price="1680">❤️</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="assets/hoodie.jpg" alt="Hoodie">
+          <p>Cozy Hoodie</p>
+          <p>₹3,360</p>
+          <span class="badge">New</span>
+          <button class="add-to-cart" data-name="Cozy Hoodie" data-price="3360">Add to Cart</button>
+          <button class="like-button" data-name="Cozy Hoodie" data-price="3360">❤️</button>
+        </div>
+        <div class="product-card">
+          <img src="assets/polo.jpg" alt="Polo Shirt">
+          <p>Polo Shirt</p>
+          <p>₹2,520</p>
+          <button class="add-to-cart" data-name="Polo Shirt" data-price="2520">Add to Cart</button>
+          <button class="like-button" data-name="Polo Shirt" data-price="2520">❤️</button>
+        </div>
+        <div class="product-card">
+          <img src="assets/sweater.jpg" alt="Sweater">
+          <p>Knit Sweater</p>
+          <p>₹3,780</p>
+          <span class="badge">Popular</span>
+          <button class="add-to-cart" data-name="Knit Sweater" data-price="3780">Add to Cart</button>
+          <button class="like-button" data-name="Knit Sweater" data-price="3780">❤️</button>
+        </div>
+        <div class="product-card">
+          <img src="assets/shorts.jpg" alt="Chino Shorts">
+          <p>Chino Shorts</p>
+          <p>₹2,940</p>
+          <button class="add-to-cart" data-name="Chino Shorts" data-price="2940">Add to Cart</button>
+          <button class="like-button" data-name="Chino Shorts" data-price="2940">❤️</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Size Chart Modal -->
+  <div id="sizeChartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Size Chart</h2>
+      <table>
+        <tr><th>Size</th><th>Chest</th><th>Length</th></tr>
+        <tr><td>S</td><td>36"</td><td>27"</td></tr>
+        <tr><td>M</td><td>40"</td><td>28"</td></tr>
+        <tr><td>L</td><td>44"</td><td>29"</td></tr>
+        <tr><td>XL</td><td>48"</td><td>30"</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Compare Colors Modal -->
+  <div id="compareColorsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Compare Colors</h2>
+      <div class="color-compare">
+        <div class="color-option">
+          <input type="checkbox" id="colorBlue" value="Blue">
+          <label for="colorBlue" style="background-color: #1e90ff;"></label>
+        </div>
+        <div class="color-option">
+          <input type="checkbox" id="colorRed" value="Red">
+          <label for="colorRed" style="background-color: #ff0000;"></label>
+        </div>
+        <div class="color-option">
+          <input type="checkbox" id="colorBlack" value="Black">
+          <label for="colorBlack" style="background-color: #000000;"></label>
+        </div>
+        <div class="color-option">
+          <input type="checkbox" id="colorWhite" value="White">
+          <label for="colorWhite" style="background-color: #ffffff; border: 1px solid #ccc;"></label>
+        </div>
+        <div class="color-option">
+          <input type="checkbox" id="colorGreen" value="Green">
+          <label for="colorGreen" style="background-color: #008000;"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div id="wishlistModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Your Wishlist</h2>
+      <div id="wishlistItems" class="wishlist-items"></div>
+      <a href="payment.html" class="proceed-payment">Proceed to Payment</a>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-total">
+        <p>Total: <strong id="cartTotal">₹0</strong></p>
+        <a href="payment.html" class="proceed-payment">Proceed to Payment</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
